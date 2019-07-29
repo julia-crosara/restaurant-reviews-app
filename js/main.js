@@ -4,15 +4,23 @@ let restaurants,
 var map
 var markers = []
 
+
 /**
  * Register the service worker
  */
+
+// Code snippet is from:
+// https://developers.google.com/web/fundamentals/primers/service-workers/
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('/sw.js')
-        .catch(function(err) {
-            console.error(err);
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            // Registration failed
+            console.log('ServiceWorker registration failed: ', err);
         });
+    });
 }
 
 /**
