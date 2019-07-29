@@ -1,24 +1,10 @@
-// Listens for install event which fires when sw is registered
-self.addEventListener('install', function(e) {
-    // Waits until install event is complete
-    e.waitUntil(
-        // Opens caches object and returns a promise chained
-        // with a function that returns added cacheFiles
-        caches.open('v1').then(function(cache) {
-            return cache.addAll(cacheFiles);
-        })
-    );
-});
+// All of the code on this page was derived from:
+// https://developers.google.com/web/fundamentals/primers/service-workers/
 
-// Caches an array of file path strings that the app uses/requests
+const CACHE_NAME = 'cache-v1';
 const cacheFiles = [
     '/',
-    '/index.html',
-    '/restaurant.html',
     '/css/styles.css',
-    '/js/dbhelper.js',
-    '/js/main.js',
-    '/js/restaurant_info.js',
     '/data/restaurants.json',
     '/img/1.jpg',
     '/img/2.jpg',
@@ -30,36 +16,57 @@ const cacheFiles = [
     '/img/8.jpg',
     '/img/9.jpg',
     '/img/10.jpg',
+    '/js/dbhelper.js',
+    '/js/main.js',
+    '/js/restaurant_info.js',
+    '/index.html',
+    '/restaurant.html',
 ];
 
-// Listens for fetch addEvent
-self.addEventListener('fetch', function(e) {
-    // respondWith method prevents default fetch event
-    e.respondWith(
-        // match method checks if event request url is already in cacheFiles
-        // loaded during install. Chain then method to receive a promise.
-        caches.match(e.request).then(function(response) {
-            // check if there's a match; if true, returns request
+self.addEventListener('install', function(event) {
+    // Perform install steps - open cache, cache files, confirm assets cached
+    event.waitUntil(
+        // takes a chain of promises
+        caches.open(CACHE_NAME)
+        .then(function(cache) {
+            console.log('Opened cache');
+            return cache.addAll(cacheFiles);
+        })
+    );
+});
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        // pass in a promise
+        caches.match(event.request) // looks at request and finds cached results
+        .then(function(response) {
+            // if matched, return cached value
             if (response) {
-                console.log('Found ', e.request, ' in cache');
                 return response;
-            } else {
-                console.log('Could not find ', e.request, ' in cache, FETCHING');
-                // if false, the request is fetched and added to the cache
-                return fetch(e.request)
-                    .then(function(response) {
-                        const clonedResponse = response.clone();
-                        // open cache; use put method to pair request & response
-                        caches.open('v1').then(function(cache) {
-                            cache.put(e.request, clonedResponse);
-                        });
-                        return response;
-                    })
-                    // catch method logs potential errors
-                    .catch(function(err) {
-                        console.error(err);
-                    });
             }
+            // if not, return the result of call to fetch
+            return fetch(event.request).then(
+                function(response) {
+                    // Check if we received a valid response
+                    // 'basic' means request is from origin; requests to 3rd party assets will not be cached.
+                    if (!response || response.status !== 200 || response.type !== 'basic') {
+                        return response;
+                    }
+
+                    // IMPORTANT: Clone the response. A response is a stream
+                    // and because we want the browser to consume the response
+                    // as well as the cache consuming the response, we need
+                    // to clone it so we have two streams.
+                    var responseToCache = response.clone();
+
+                    caches.open(CACHE_NAME)
+                        .then(function(cache) {
+                            cache.put(event.request, responseToCache);
+                        });
+
+                    return response;
+                }
+            );
         })
     );
 });
