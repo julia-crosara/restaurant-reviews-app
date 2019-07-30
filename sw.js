@@ -1,10 +1,15 @@
-// All of the code on this page was derived from:
+// The code on this page was derived from:
 // https://developers.google.com/web/fundamentals/primers/service-workers/
 
 const CACHE_NAME = 'cache-v1';
 const cacheFiles = [
     '/',
+    '/index.html',
+    '/restaurant.html',
     '/css/styles.css',
+    '/js/dbhelper.js',
+    '/js/main.js',
+    '/js/restaurant_info.js',
     '/data/restaurants.json',
     '/img/1.jpg',
     '/img/2.jpg',
@@ -16,11 +21,6 @@ const cacheFiles = [
     '/img/8.jpg',
     '/img/9.jpg',
     '/img/10.jpg',
-    '/js/dbhelper.js',
-    '/js/main.js',
-    '/js/restaurant_info.js',
-    '/index.html',
-    '/restaurant.html',
 ];
 
 self.addEventListener('install', function(event) {
@@ -38,17 +38,16 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
     event.respondWith(
         // pass in a promise
-        caches.match(event.request) // looks at request and finds cached results
+        caches.match(event.request)
         .then(function(response) {
             // if matched, return cached value
             if (response) {
                 return response;
             }
-            // if not, return the result of call to fetch
+
             return fetch(event.request).then(
                 function(response) {
                     // Check if we received a valid response
-                    // 'basic' means request is from origin; requests to 3rd party assets will not be cached.
                     if (!response || response.status !== 200 || response.type !== 'basic') {
                         return response;
                     }
