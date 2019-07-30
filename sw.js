@@ -1,4 +1,4 @@
-// The code on this page was derived from:
+// Code resource:
 // https://developers.google.com/web/fundamentals/primers/service-workers/
 
 const CACHE_NAME = 'cache-v1';
