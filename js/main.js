@@ -168,7 +168,7 @@ createRestaurantHTML = (restaurant) => {
     more.href = DBHelper.urlForRestaurant(restaurant);
     li.append(more)
 
-    return li;
+    return li
 }
 
 /**
@@ -185,12 +185,12 @@ addMarkersToMap = (restaurants = self.restaurants) => {
         }
         self.markers.push(marker);
     });
-}
 
+}
 /**
  * Register the service worker
  */
-// Code snippet is from:
+// Code resource:
 // https://developers.google.com/web/fundamentals/primers/service-workers/
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
