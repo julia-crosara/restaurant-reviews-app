@@ -6,7 +6,7 @@ Project for Udacity's FEND Program. I converted a static webpage to a mobile-rea
 
 ### Specification
 
-I was provided starter code had a few issues. It was barely usable on a desktop browser, much less a mobile device. It didn't include any standard accessibility features, and it didn't work offline. I updated the code to resolve these issues while still maintaining the included functionality.
+The starter code was barely usable on a desktop browser, much less a mobile device. It didn't include any standard accessibility features, and it didn't work offline. I updated the code to resolve these issues while still maintaining the included functionality.
 
 ### How to run the application
 
