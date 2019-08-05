@@ -10,8 +10,8 @@ body,
 td,
 th,
 p {
-    font-family: "Roboto", sans-serif;
-	font-size: 1rem;
+    font-family: 'Cantarell', sans-serif;
+	font-size: 1.5rem;
 	color: #333;
 	line-height: 1.5;
 }
@@ -20,6 +20,12 @@ body {
 	background-color: #94976e;
 	margin: 0 auto;
 	position:relative;
+}
+
+h1,
+h2 {
+    font-size: 2rem;
+    padding: .2rem;
 }
 
 ul,
@@ -74,7 +80,7 @@ section {
 nav {
   width: 100%;
   height: auto;
-  background-color: #252831;
+  background-color: #444;
   text-align:center;
 }
 
@@ -88,6 +94,7 @@ nav h1 {
 h1 a {
   color: #fff;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 #breadcrumb {
@@ -132,7 +139,7 @@ h1 a {
 .filter-options {
   width: 100%;
   height: auto;
-  background-color: #3397DB;
+  background-color: #444;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -145,6 +152,7 @@ h1 a {
   padding-top: 5px;
   letter-spacing: 2px;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .filter-options select {
@@ -161,7 +169,7 @@ h1 a {
 /* ====================== Restaurant Listing ====================== */
 
 #restaurants-list {
-  background-color: #f3f3f3;
+  background-color: #94976e;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
@@ -186,10 +194,10 @@ h1 a {
 
 #restaurants-list .restaurant-img {
   background-color: #ccc;
-    display: block;
-    margin-top: 10px;
-    max-width: 100%;
-    overflow: hidden;
+  display: block;
+  margin-top: 20px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 #restaurants-list li h1 {
@@ -285,7 +293,7 @@ h1 a {
   border-top: 1px solid #fff;
   width: 50%;
   height: auto;
-
+  font-size: .75rem;
 }
 #reviews-container h2 {
   color: #f58500;
