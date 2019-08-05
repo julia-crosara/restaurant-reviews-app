@@ -1,12 +1,12 @@
-# Restaurant Reviews App Project for Udacity's FEND Program
+# Restaurant Reviews App 
 
 ## Project Overview: 
 
-I incrementally converted a static webpage to a mobile-ready web application. The starter code included a static design that lacked accessibility. Now it is responsive on different-sized displays and accessible for screen-reader use. I also added a service worker to begin the process of creating a seamless offline experience for users.
+Project for Udacity's FEND Program. I converted a static webpage to a mobile-ready web application. The starter code included a static design that lacked accessibility. Now it is responsive on different-sized displays and accessible for screen-reader use. I also added a service worker to begin the process of creating a seamless offline experience for users.
 
 ### Specification
 
-I was provided the code for a restaurant reviews website. The code had a lot of issues. It was barely usable on a desktop browser, much less a mobile device. It didn't include any standard accessibility features, and it didn't work offline. I updated the code to resolve these issues while still maintaining the included functionality.
+I was provided starter code had a few issues. It was barely usable on a desktop browser, much less a mobile device. It didn't include any standard accessibility features, and it didn't work offline. I updated the code to resolve these issues while still maintaining the included functionality.
 
 ### How to run the application
 
