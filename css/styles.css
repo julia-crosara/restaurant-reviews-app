@@ -11,15 +11,15 @@ td,
 th,
 p {
     font-family: 'Cantarell', sans-serif;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	color: #333;
-	line-height: 1.5;
+	line-height: 1.25;
 }
 
 body {
 	background-color: #94976e;
 	margin: 0 auto;
-	position:relative;
+	position: relative;
 }
 
 h1,
@@ -61,7 +61,7 @@ section {
 }
 
 #maincontent {
-  background-color: #f3f3f3;
+  background-color: #fff;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -70,12 +70,25 @@ section {
 #footer {
   background-color: #444;
   color: #fff;
-  font-size: .5rem;
+  font-size: .65rem;
   letter-spacing: 1px;
   padding: 15px 35px;
   text-transform: uppercase;
   width: auto;
+  text-align: left;
 }
+
+#footer .restaurant {
+  background-color: #444;
+  color: #fff;
+  font-size: .65rem;
+  letter-spacing: 1px;
+  padding: 15px 35px;
+  text-transform: uppercase;
+  width: auto;
+  text-align: left;
+}
+
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
@@ -86,8 +99,9 @@ nav {
 
 nav h1 {
   margin: auto;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 5px;
+  padding: 2%;
   width: auto;
 }
 
@@ -98,12 +112,13 @@ h1 a {
 }
 
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px 20px;
     list-style: none;
-    background-color: #eee;
+    background-color: #fff;
     font-size: 1rem;
     margin: 0;
-    width: calc(50% - 80px);
+    width: auto;
+    /* width: calc(50% - 80px); */
 }
 
 /* Display list items side by side */
@@ -188,7 +203,7 @@ h1 a {
   padding: 0 30px 25px;
   text-align: left;
   min-width: 250px;
-  max-width: 270px;
+  max-width: 300px;
   display: inline-block;
 }
 
@@ -197,7 +212,7 @@ h1 a {
   display: block;
   margin-top: 20px;
   max-width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #restaurants-list li h1 {
@@ -289,8 +304,8 @@ h1 a {
 #restaurant-container,
 #reviews-container {
   padding: 2%;
-  border-bottom: 1px solid #d9d9d9;
-  border-top: 1px solid #fff;
+  /* border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #fff; */
   width: 50%;
   height: auto;
   font-size: .75rem;
@@ -298,8 +313,8 @@ h1 a {
 #reviews-container h2 {
   color: #f58500;
   font-size: 1.75rem;
-  font-weight: 300;
-  padding-bottom: 10px;
+  font-weight: 700;
+  /* padding-bottom: 10px; */
 }
 #reviews-list {
   margin: 0;
@@ -311,9 +326,10 @@ h1 a {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 90%;
-  padding: 10px;
+  padding: 3%;
+  margin: 3%;
 }
 #reviews-list li p {
   width: auto;

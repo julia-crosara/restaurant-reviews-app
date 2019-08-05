@@ -1,32 +1,13 @@
 @charset "utf-8";
-/* Responsive styles */
 
-@media screen and (min-width: 350px) {
-    .container {
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+    body,
+    td,
+    th,
+    p {
+        font-family: 'Cantarell', sans-serif;
         font-size: .75rem;
-    }
-    footer {
-        text-align: center;
+        color: #333;
     }
 }
-
-/* tablets */
-
-@media screen and (min-width: 700px) {
-    .container {
-        font-size: 1rem;
-    }
-    footer {
-        text-align: center;
-    }
-}
-
-/* laptops and desktops */
-
-/* @media screen and (min-width: 1000px) {
-    .container {
-        width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
