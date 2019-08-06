@@ -4,10 +4,6 @@
 
 Project for Udacity's FEND Program. I converted a static webpage to a mobile-ready web application. The starter code included a static design that lacked accessibility. Now it is responsive on different-sized displays and accessible for screen-reader use. I also added a service worker to begin the process of creating a seamless offline experience for users.
 
-### Specification
-
-The starter code was barely usable on a desktop browser, much less a mobile device. It didn't include any standard accessibility features, and it didn't work offline. I updated the code to resolve these issues while still maintaining the included functionality.
-
 ### How to run the application
 
 Download or clone this repository. 
