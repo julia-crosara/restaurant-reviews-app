@@ -1,13 +1,21 @@
 @charset "utf-8";
 
 /* Media Queries */
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 900px) {
     body,
     td,
     th,
-    p {
-        font-family: 'Cantarell', sans-serif;
+    p,
+    #breadcrumb {
         font-size: .75rem;
-        color: #333;
+    }
+
+    #restaurant-name {
+        font-size: 1.2rem;
+    }
+
+    #reviews-container h2 {
+        font-size: 1.2rem;
     }
 }
