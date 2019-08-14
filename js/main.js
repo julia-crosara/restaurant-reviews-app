@@ -141,7 +141,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 }
 
 /**
- * Create restaurant HTML.
+ * Create restaurant HTML
  */
 createRestaurantHTML = (restaurant) => {
     const li = document.createElement('li');
@@ -150,8 +150,9 @@ createRestaurantHTML = (restaurant) => {
     image.className = 'restaurant-img';
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
     li.append(image);
+    image.setAttribute("alt", "restaurant image");
 
-    const name = document.createElement('h1');
+    const name = document.createElement('h2');
     name.innerHTML = restaurant.name;
     li.append(name);
 
@@ -185,13 +186,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
         }
         self.markers.push(marker);
     });
-
 }
+
 /**
  * Register the service worker
+ * Code resource:
+ * https://developers.google.com/web/fundamentals/primers/service-workers/
  */
-// Code resource:
-// https://developers.google.com/web/fundamentals/primers/service-workers/
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(function(registration) {
