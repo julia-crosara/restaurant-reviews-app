@@ -71,6 +71,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 /**
  * Initialize leaflet map, called from HTML.
  */
+
 initMap = () => {
     self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
@@ -132,6 +133,7 @@ resetRestaurants = (restaurants) => {
 /**
  * Create all restaurants HTML and add them to the webpage.
  */
+
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
     const ul = document.getElementById('restaurants-list');
     restaurants.forEach(restaurant => {
@@ -143,6 +145,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 /**
  * Create restaurant HTML
  */
+
 createRestaurantHTML = (restaurant) => {
     const li = document.createElement('li');
 
@@ -167,14 +170,15 @@ createRestaurantHTML = (restaurant) => {
     const more = document.createElement('a');
     more.innerHTML = 'View Details';
     more.href = DBHelper.urlForRestaurant(restaurant);
-    li.append(more)
+    li.append(more);
 
-    return li
+    return li;
 }
 
 /**
  * Add markers for current restaurants to the map.
  */
+
 addMarkersToMap = (restaurants = self.restaurants) => {
     restaurants.forEach(restaurant => {
         // Add marker to the map
@@ -193,6 +197,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
  * Code resource:
  * https://developers.google.com/web/fundamentals/primers/service-workers/
  */
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(function(registration) {
