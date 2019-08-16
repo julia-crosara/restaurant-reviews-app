@@ -1,11 +1,27 @@
 @charset "utf-8";
 
 /* Media Queries */
+@media screen and (max-width: 300px) {
+    #restaurants-list li {
+        width: 85%;
+        height: auto;
+    }
+}
+
 
 @media screen and (max-width: 400px) {
     nav h1 a {
-        font-size: 1.2rem;
-        letter-spacing: 2px;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    #restaurant-img {
+        width: 75%;
+        margin-top: 10%;
+    }
+
+    #restaurant-name {
+        font-size: 2rem;
     }
 
 }
@@ -28,7 +44,13 @@
 
 }
 
-@media screen and (min-width: 700px) {
-
+@media screen and (min-width: 1200px) {
+    #restaurant-img,
+    #restaurant-name,
+    #restaurant-cuisine, {
+        width: 50%;
+        height: auto;
+        justify-content: center;
+    }
 
 }
