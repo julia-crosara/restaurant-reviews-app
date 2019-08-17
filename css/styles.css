@@ -1,4 +1,4 @@
-/* * * CSS Document * * */
+/* * * * CSS Document * * * */
 
 html,
 body {
@@ -72,7 +72,7 @@ section {
     text-align: center;
 }
 
-/* * * Navigation * * */
+/* * * * Navigation * * * */
 
 nav {
     width: 100%;
@@ -85,7 +85,7 @@ nav {
 nav h1 a {
     color: #fff;
     letter-spacing: 5px;
-    font-size: 2rem;
+    font-size: 2.25rem;
     text-transform: uppercase;
     margin-top: 0;
 }
@@ -123,7 +123,7 @@ nav h1 a {
     text-decoration: underline;
 }
 
-/* * * Map * * */
+/* * * * Map * * * */
 
 #map {
     height: 400px;
@@ -132,46 +132,43 @@ nav h1 a {
 }
 
 #map-container {
-    position: relative;
-    /* top: 65px; */
-}
-#map-container {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* Restaurant Filtering */
+/* * * * Restaurant Filtering * * * */
 
 .filter-options {
-    width: auto;
+    width: 100%;
     height: auto;
     background-color: #99b19c;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    vertical-align: middle;
 }
 
 .filter-options h2 {
-    color: white;
+    color: #fff;
     font-size: 1.2rem;
-    font-weight: normal;
-    padding: .05rem;
     text-transform: uppercase;
+    display: inline;
 }
 
 .filter-options select {
-    background-color: white;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #eee;
     font-size: 1rem;
     height: 2rem;
-    margin: 0.6rem;
     width: auto;
+    margin: 0.75rem 0.5rem;
     font-family: 'Cantarell', sans-serif;
+    display: inline;
+    overflow: visible;
 }
 
-/* Restaurant Listing */
+/* * * * Restaurant Listings * * * */
 
 #restaurants-list {
     background-color: #d7d1c9;
@@ -206,7 +203,7 @@ nav h1 a {
 }
 
 #restaurants-list li h2 {
-    color: #99b19c;
+    color: #672f2f;
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 1.3;
@@ -231,71 +228,80 @@ nav h1 a {
     width: 75%;
 }
 
-/* Restaurant Details */
+/* * * * Restaurant Details * * * */
 
 #restaurant-container {
     display: flex;
     flex-direction: column;
-    background-color: #d7d1c9;
+    background-color: #fff;
+    justify-content: center;
 }
 
 #restaurant-container h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 #restaurant-name {
-    color: #99b19c;
+    color: #672f2f;
     margin: 0 auto;
     text-transform: uppercase;
     text-align: center;
-    background-color: #fff;
     width: 70%;
+    padding-top: 2%;
 }
 
 #restaurant-img {
     width: 70%;
-    margin: 0 auto;
+    margin: 5% auto 0 auto;
 }
 
 #restaurant-cuisine {
-    background-color: #672f2f;
+    background-color: orange;
     color: #fff;
     letter-spacing: 10px;
     text-align: center;
     text-transform: uppercase;
     width: 70%;
     height: auto;
-    margin: 5% auto 0 auto;
+    padding: 0.3rem 0;
+    margin: 0 auto;
 }
 
 #restaurant-address {
     text-transform: uppercase;
     text-align: center;
     font-size: 1rem;
-    background-color: #fff;
     width: 70%;
-    margin: 0 auto;
+    margin: 2% auto;
+    color: #672f2f;
+    font-weight: bold;
+    border-bottom: 2px dotted #d7d1c9;
+    padding-bottom: 2%;
 }
 
 #restaurant-hours {
     text-align: justify;
     color: #666;
-    background-color: #fff;
-    margin: 0 auto;
-    width: 70%;
+    margin: 1% auto 4% auto;
+}
+
+#restaurant-hours table {
+    width: 100%;
+    height: auto;
 }
 
 #reviews-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 2%;
-    background-color: #d7d1c9;
+    background-color: #fff;
+    margin: 0 auto 5% auto;
+    border-top: 20px solid #d7d1c9;
 }
 
 #reviews-container h3 {
     color: #99b19c;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -306,22 +312,17 @@ nav h1 a {
     width: 70%;
 }
 
-
 #reviews-list li {
     background-color: #fff;
-    border: 2px solid #f3f3f3;
+    border: 2px dotted #d7d1c9;
     display: block;
     list-style-type: none;
     margin: 0 0 30px;
     overflow: hidden;
-    padding: 20px 20px 20px 20px;
+    padding: 1.5rem;
     position: relative;
 }
 
 #reviews-list li p {
     margin: 0 0 10px;
 }
-
-.reviewer-name {}
-
-.review-date {}
