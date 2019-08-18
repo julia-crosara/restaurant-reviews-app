@@ -1,10 +1,15 @@
-/* * * * CSS Document * * * */
+/* CSS Document */
+/* Author: Julia Crosara */
+/* Date: August 19, 2019 */
 
 body {
     margin: 0;
     padding: 0;
+    background-color: #672f2f;
     width: 100%;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body,
@@ -15,20 +20,9 @@ p {
     color: #333;
 }
 
-body {
-    background-color: #672f2f;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 ul,
 li {
     color: #333;
-}
-
-hr {
-    width: 50%;
-    
 }
 
 a {
@@ -65,6 +59,8 @@ section {
     min-height: 100%;
     min-width: 100%;
     margin: 0;
+    position: relative;
+    right: 0;
 }
 
 #footer {
@@ -88,7 +84,7 @@ nav {
 
 nav h1 a {
     color: #fff;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     font-size: 2.25rem;
     text-transform: uppercase;
     margin-top: 0;
@@ -111,7 +107,7 @@ nav h1 a {
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
     padding: 0.6rem;
-    color: black;
+    color: #333;
     content: "/\00a0";
 }
 
@@ -136,9 +132,9 @@ nav h1 a {
 }
 
 #map-container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    height: auto;
+    margin: 0;
 }
 
 /* * * * Restaurant Filtering * * * */
@@ -148,13 +144,12 @@ nav h1 a {
     height: auto;
     background-color: #99b19c;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     vertical-align: middle;
 }
 
 .filter-options h2 {
-    color: #fff;
+    color: #672f2f;
     font-size: 1.2rem;
     text-transform: uppercase;
     display: inline;
@@ -189,14 +184,14 @@ nav h1 a {
 
 #restaurants-list li {
     background-color: #fff;
-    border: 2px solid #ccc;
-    margin: 15px;
-    min-height: 380px;
-    padding: 0 30px 25px;
+    border: 1px solid #ccc;
+    margin: 1.5%;
+    padding: 1.25rem 1.5rem 1.8rem;
     text-align: center;
     min-width: 250px;
     max-width: 300px;
     display: inline-block;
+    justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -276,7 +271,7 @@ nav h1 a {
     text-transform: uppercase;
     text-align: center;
     font-size: 1rem;
-    width: 70%;
+    width: 80%;
     margin: 2% auto;
     color: #672f2f;
     font-weight: bold;
