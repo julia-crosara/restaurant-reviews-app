@@ -3,20 +3,14 @@
 /* * * * Media Queries * * * */
 @media screen and (max-width: 300px) {
     #restaurants-list li {
-        width: 85%;
-        height: auto;
-    }
-
-    nav h1 a {
-        font-size: 0.7rem;
-        letter-spacing: 0;
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 400px) {
-    nav h1 a {
-        font-size: 0.8rem;
-        letter-spacing: 0;
+    .filter-options select {
+        width: auto;
+        margin: 0.65rem 0.3rem;
     }
 
     #restaurant-container {
@@ -26,17 +20,13 @@
         padding-bottom: 2%;
     }
 
-    #restaurant-container h2 {
-        font-size: 1.5rem;
-    }
-
     #restaurant-address {
         font-weight: normal;
         font-size: 0.8rem;
     }
 
     #restaurant-hours {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
         margin: 0 auto;
     }
 
@@ -52,23 +42,29 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
+    #maincontent {
+        width: 100%;
+        position: fixed;
+        right: 0;
+    }
+
     nav h1 a {
         font-size: 1.5rem;
-        letter-spacing: 2px;
+        text-align: center;
+        letter-spacing: normal;
     }
+}
 
-    #restaurant-hours {
-        font-size: 0.85rem;
-        margin: 0 auto;
-        width: 75%;
-        justify-content: center;
-    }
-
+@media screen and (max-width: 500px) {
     #restaurant-container {
         width: 85%;
         margin: 5% auto 0 auto;
         justify-content: center;
+    }
+
+    #restaurant-container h2 {
+        font-size: 1.5rem;
     }
 
     #reviews-container {
@@ -81,16 +77,9 @@
     .filter-options h2 {
         display: none;
     }
-
 }
 
-
 @media screen and (min-width: 500px) {
-    nav h1 a {
-        font-size: 2rem;
-        letter-spacing: 2px;
-    }
-
     #restaurant-container {
         width: 80%;
         margin: 5% auto 0 auto;
@@ -101,6 +90,12 @@
         width: 80%;
         margin: 0 auto;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #restaurant-container h2 {
+        font-size: 1.75rem;
     }
 }
 
@@ -119,6 +114,11 @@
 }
 
 @media screen and (min-width: 900px) {
+    nav h1 a {
+        font-size: 2.25rem;
+        letter-spacing: 6px;
+    }
+
     #restaurant-container {
         width: 60%;
         margin: 4% auto 0 auto;
@@ -133,6 +133,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+    nav h1 a {
+        font-size: 2.5rem;
+        letter-spacing: 8px;
+    }
+
     #restaurant-container {
         width: 50%;
         margin: 4% auto 0 auto;
