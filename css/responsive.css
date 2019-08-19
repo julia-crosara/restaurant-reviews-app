@@ -1,19 +1,9 @@
 @charset "utf-8";
 
-/* CSS Document */
-/* Author: Julia Crosara */
-/* Date: August 18, 2019 */
-
 
 /* * * * Media Queries * * * */
-@media screen and (max-width: 300px) {
-    #maincontent {
-        min-width: 100%;
-        margin: 0;
-        position: relative;
-        right: 0;
-    }
 
+@media screen and (max-width: 280px) {
 
     #restaurants-list ul {
         width: 75%;
@@ -31,12 +21,15 @@
 
 @media screen and (max-width: 300px) {
 
-    /* #maincontent {
+    #maincontent,
+    #map-container,
+    #map {
         position: relative;
         right: 0;
         margin: 0;
+        padding: 0;
         min-width: 100%;
-    } */
+    }
 
     nav h1 a {
         font-size: 1rem;
@@ -97,11 +90,14 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 400px) {
     nav h1 a {
         font-size: 1.8rem;
         letter-spacing: 2px;
     }
+}
+
+@media screen and (max-width: 500px) {
 
     #restaurant-container {
         width: 85%;
