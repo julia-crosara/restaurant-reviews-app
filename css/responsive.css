@@ -6,14 +6,18 @@
 
 
 /* * * * Media Queries * * * */
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 300px) {
     #maincontent {
+        min-width: 100%;
+        margin: 0;
         position: relative;
         right: 0;
     }
 
+
     #restaurants-list ul {
-        width: 85%;
+        width: 75%;
+        height: auto;
     }
 
     #restaurant-hours {
@@ -25,17 +29,14 @@
     }
 }
 
-
-
-
 @media screen and (max-width: 300px) {
 
-    #maincontent {
+    /* #maincontent {
         position: relative;
         right: 0;
         margin: 0;
         min-width: 100%;
-    }
+    } */
 
     nav h1 a {
         font-size: 1rem;
@@ -44,7 +45,7 @@
 
     .filter-options select {
         width: auto;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         margin: 0.3rem 0.3rem;
         overflow: visible;
     }
@@ -112,10 +113,6 @@
         font-size: 1.6rem;
     }
 
-    #restaurant-hours {
-        font-size: 0.75rem;
-    }
-
     #reviews-container {
         width: 85%;
         margin: 0 auto;
@@ -150,11 +147,11 @@
     }
 
     #restaurant-container h2 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     #restaurant-hours {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 }
 
