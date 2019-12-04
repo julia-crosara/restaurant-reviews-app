@@ -2,7 +2,7 @@
 
 ## Project Overview: 
 
-Project for Udacity's FEND Program. I converted a static webpage to a mobile-ready web application.  It is responsive on different-sized displays and accessible for screen-reader use. I also added a service worker to begin the process of creating a seamless offline experience for users.
+Project for Udacity's Front-End Nanodegree. I converted a static webpage into a mobile-ready web application.  It is responsive on different-sized displays and accessible for screen-reader use. I also added a service worker to begin the process of creating a seamless offline experience for users.
 
 ### How to run the application
 
