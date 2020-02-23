@@ -1,3 +1,5 @@
+![Screenshot of Restaurant Reviews App](/img/screenshot.png?raw=true "Screenshot")
+
 # Restaurant Reviews App 
 
 ## Project Overview: 
